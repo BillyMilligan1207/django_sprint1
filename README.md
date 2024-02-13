@@ -1,1 +1,1 @@
-# Blogicum mine
+# Blogicum
