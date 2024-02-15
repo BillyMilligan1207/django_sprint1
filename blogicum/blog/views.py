@@ -50,13 +50,10 @@ def index(request):
     return render(request, template_name, {'posts': reversed(posts)})
 
 
-posts_mapping = {post['id']: post for post in posts}
-
-
 def post_detail(request, id):
     template_name = 'blog/detail.html'
     try:
-        return render(request, template_name, {'post': posts_mapping[id]}))
+        return render(request, template_name, {'post': posts[id]})
     except IndexError:
         raise Http404
 
